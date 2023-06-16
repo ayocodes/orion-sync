@@ -19,7 +19,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <main className="flex items-start gap-8">
           <MainNav />
-          <div className=" pt-8 pr-8 flex flex-col gap-8 w-full h-screen">
+          <div className=" pt-8 pr-8 flex flex-col gap-8 w-full h-screen ">
             <div className=" flex justify-end items-center w-full">
               <img
                 src="/profile.png"

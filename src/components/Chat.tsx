@@ -1,20 +1,36 @@
 import React from "react";
 
 const Chat = () => {
+  const chatMessage = [
+    {
+      name: "Tomi",
+      message:
+        "Aspernatur dignissimos saepe accusamus consectetur voluptatum officia obcaecati ex commodi ullam error.",
+    },
+    {
+      name: "Nelson",
+      message:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur dignissimos saepe accusamus consectetur voluptatum officia obcaecati ex commodi ullam error.",
+    },
+    {
+      name: "Nelson",
+      message:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur dignissimos saepe accusamus consectetur voluptatum officia obcaecati ex commodi ullam error.",
+    },
+  ];
   return (
-    <div className=" flex bg-red-200 h-full flex-col relative">
-      <div className=" flex flex-grow bg-blue-300 w-full"></div>
-        <div className=" bg-white px-5 flex justify-between py-2.5 gap-6">
-          <div className=" border border-[#B6B6B6] w-full rounded-full px-2 py-1 flex items-center gap-2  pl-4">
-            <img src="/paperclip.svg" alt="" />
-            <input
-              type="text"
-              className=" w-full focus:outline-none"
-              placeholder="Message..."
-            />
+    <div className=" flex flex-col gap-[30px] h-[460px] overflow-y-scroll">
+      {chatMessage.map((chat, i) => (
+        <div className=" flex gap-4" key={i}>
+          <div className=" min-w-[60px] h-[60px] bg-violet-500 rounded-full" />
+          <div className=" flex flex-col gap-2.5 w-full">
+            <p className=" text-[#ACACAC] font-medium">{chat.name}</p>
+            <div className=" p-4 w-full bg-[#E9E9E9] rounded-[20px]">
+              {chat.message}
+            </div>
           </div>
-          <img src="/send.svg" alt="" className=" cursor-pointer" />
         </div>
+      ))}
     </div>
   );
 };
