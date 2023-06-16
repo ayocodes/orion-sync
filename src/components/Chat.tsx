@@ -19,7 +19,7 @@ const Chat = () => {
     },
   ];
   return (
-    <div className=" flex flex-col gap-[30px] h-[460px] overflow-y-scroll">
+    <div className=" flex flex-col gap-[30px] h-[calc(100vh-370px)] overflow-y-scroll">
       {chatMessage.map((chat, i) => (
         <div className=" flex gap-4" key={i}>
           <div className=" min-w-[60px] h-[60px] bg-violet-500 rounded-full" />
