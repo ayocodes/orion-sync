@@ -10,7 +10,7 @@ const icon = [
   { homeA: "/Wallet.svg", homeN: "/WalletW.svg", location: "/wallet" },
   { homeA: "/Document.svg", homeN: "/DocumentW.svg", location: "/note" },
   { homeA: "/Folder.svg", homeN: "/FolderW.svg", location: "/folder" },
-  { homeA: "/Calendar.svg", homeN: "/CalendarW.svg", location: "/calender" },
+  { homeA: "/Calendar.svg", homeN: "/CalendarW.svg", location: "/schedule" },
   { homeA: "/Setting.svg", homeN: "/SettingW.svg", location: "/setting" },
 ];
 
@@ -27,7 +27,7 @@ const MainNav = () => {
           <img
             src={pathname == icon.location ? icon.homeA : icon.homeN}
             alt=""
-            className="w-[43px]"
+            className="min-w-[43px]"
           />
         </Link>
       ))}
